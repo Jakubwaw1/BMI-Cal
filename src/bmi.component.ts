@@ -17,7 +17,6 @@ export class BmicalcComponent implements OnInit {
     diff = diff * 10;
     diff = Math.round(diff);
     if (diff == 10) {
-      // Need to bump up the whole thing instead
       f_bmi += 1;
       diff = 0;
     }
@@ -39,16 +38,15 @@ export class BmicalcComponent implements OnInit {
     var fi = f.htf.value * 12;
     var i = f.htf.value * 12 + f.hti.value * 1.0;
     if (!this.chkw(v)) {
-      alert('Please enter a number for your height.');
+      alert('Podaj swój wzrost.');
       f.htf.focus();
       return;
     }
     if (!this.chkw(w)) {
-      alert('Please enter a number for your weight.');
+      alert('Podaj swoją wagę.');
       f.wt.focus();
       return;
     }
-    // Perform the calculation
     f.bmi.value = this.cal_bmi(w, i);
     f.bmi.focus();
   }
