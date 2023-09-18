@@ -26,74 +26,38 @@
 </ul>
 <form name="bmi_input" id="bmi_input">
 
-                                                    <a>Check Your
-                                                    BMI</a>
-
-
-                                                        <strong>Your
-                                                        Height:</strong>&nbsp;
-                                                       
-                                                          <input type="text"
-                                                          name=
-                                                          "lbs"
-                                                          size="3"
-                                                          id=
-                                                          "height_feet" />
-                                                       
-                                                          <input type="text"
-                                                          name=
-                                                          "ins"
-                                                          size="3"
-                                                          id=
-                                                          "height_inches" />
-                                                        
-                                                          <strong><label for="height_feet">
-                                                          (feet)</label></strong>
-                                                    
-                                                       
-                                                        <strong><label for="your_weight">
-                                                          Your
-                                                          Weight:</label>
-                                                          &nbsp;</strong>
-                                                        
-                                                          <input type="text"
-                                                          name="wt"
-                                                          size="3"
-                                                          id=
-                                                          "your_weight" />
-                                                       
-                                                          <strong>(pounds)</strong>
-                                                        
-<input type="button" value="Compute BMI" (click)="this.compute()"/>
-                                                       
-                                                             
-                                                                  Your
-                                                                  BMI:</span></label><br />
-
-                                                                  <input name="bmi"
-                                                                  type="text"
-                                                                  size="4"
-                                                                  id="yourbmi"
-                                                                  style="text-align: center" />
-                                                                  </div>
-                                                              
-                                          <strong>BMI
-                                          Categories:</strong><br />
-
-                                          Underweight =
-                                          &lt;18.5<br />
-                                          Normal weight =
-                                          18.5–24.9<br />
-                                          Overweight =
-                                          25–29.9<br />
-                                          Obesity = BMI of 30 or
-                                          greater
-                                        </p>
-                                      
-                                </form>
-                              
-                  </div>
-                
-    </div>
+  <input
+  type="number"
+  class="wzrost"
+  id="wzrost"
+  [(ngModel)]="wzrost"
+  name="wzrost"
+  required
+  #wzrostForm="ngModel"
+/>
+<div
+  class="alert"
+  *ngIf="wzrostForm.invalid && wzrostForm.touched"
+>
+  Pole wzrost jest wymagane
+</div>
+</label>
+<input
+type="number"
+class="waga"
+id="waga"
+[(ngModel)]="waga"
+name="waga"
+required
+#wagaForm="waga"
+/>
+<div
+class="alert"
+*ngIf="wagaForm.invalid && wagaForm.touched"
+>
+Pole waga jest wymagane
+</div>
+</label>
+</from>
   </body>
 </html>
