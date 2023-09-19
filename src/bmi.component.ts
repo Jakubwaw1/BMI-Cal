@@ -12,9 +12,10 @@ export class bmicomponent {
   bmi: number = 0;
 
   calculateBMI() {
-    this.bmi = this.waga / (this.wzrost * this.wzrost);
-    return this.bmi;
+    var bmi = this.waga / (this.wzrost * this.wzrost);
+    return bmi;
   }
+  function() {
   if (bmi < 18)
   {
     return "niedowaga";
@@ -31,4 +32,5 @@ export class bmicomponent {
   {
     return "otyłość";
   }
+}
 }
