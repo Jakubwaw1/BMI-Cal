@@ -12,7 +12,7 @@ export class bmicomponent {
   bmi: number = 0;
 
   calculateBMI() {
-    var bmi = this.waga / (this.wzrost * this.wzrost);
+    var bmi = this.waga / ((this.wzrost / 100) * (this.wzrost / 100));
     return bmi;
 
     if (bmi < 18) {

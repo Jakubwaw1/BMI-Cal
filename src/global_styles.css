@@ -1,1 +1,11 @@
-/* Add application styles & imports to this file! */
+#banner
+{
+ font-size: 150%;
+ text-align: center;
+}
+#container
+{
+  font-family: Arial;
+  background-color: black;
+  color: white;
+}
