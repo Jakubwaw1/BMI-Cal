@@ -3,11 +3,11 @@ import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
-import { BmicalcComponent } from './bmi.component';
+import { bmicomponent } from './bmi.component';
 
 @NgModule({
   imports: [BrowserModule, FormsModule],
-  declarations: [AppComponent, BmicalcComponent],
+  declarations: [AppComponent, bmicomponent],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

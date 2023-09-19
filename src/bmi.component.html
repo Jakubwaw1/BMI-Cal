@@ -58,6 +58,17 @@ class="alert"
 Pole waga jest wymagane
 </div>
 </label>
+<button
+type="button"
+class="przycisk"
+style="background-color: red;"
+(click)="formularz.resetForm()"
+>
+Resetuj
+</button>
+<button type="submit" class="przycisk" [disabled]="!formularz.form.valid">
+Sprawdź
+</button>
 </from>
   </body>
 </html>
