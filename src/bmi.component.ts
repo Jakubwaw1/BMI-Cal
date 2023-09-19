@@ -15,21 +15,15 @@ export class bmicomponent {
     var bmi = this.waga / (this.wzrost * this.wzrost);
     return bmi;
 
-  if (bmi < 18)
-  {
-    return "niedowaga";
+    if (bmi < 18) {
+      return 'niedowaga';
+    } else if (bmi > 18 && bmi < 25) {
+      return 'waga prawidłowa';
+    } else if (bmi > 25 && bmi < 30) {
+      return 'nadwaga';
+    } else bmi > 30;
+    {
+      return 'otyłość';
+    }
   }
-  else if (bmi > 18 && bmi < 25)
-  {
-    return "waga prawidłowa";
-  }
-  else if (bmi > 25 && bmi < 30)
-  {
-    return "nadwaga";
-  }
-  else (bmi >30)
-  {
-    return "otyłość";
-  }
-
 }
